@@ -5,26 +5,30 @@ Text Color (Dark Gray): #2b2b2b;
 Primary Color (Light Green): #2ECC71
 Secondary Color (Light Yellow): #F7DC6F
 */
+
 :root {
-  --primary-color: #357b70;
-  --secondary-color: #e0b354;
+  --primary-color: #f23a46;
+  --secondary-color: #62cc77;
+  --secondary-color-darker: #238236;
   --dark-grey: #2b2b2b;
   --font-weight: 700;
 }
 
 body {
-  background-color: lightgray;
+  background-color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
   /* Sets the font size to 16px */
   line-height: 1.6;
   /* Sets the line-height to 1.6 */
+  border: 3px solid var(--primary-color);
 }
 
 h1 {
   font-size: 30px;
   font-weight: var(--font-weight);
+  color: var(--secondary-color-darker);
 }
 
 h2 {
@@ -54,6 +58,10 @@ a:visited {
 a:active {
   /* Selected link */
   color: #489c79;
+}
+
+.nagivation-list {
+  color: var(--primary-color);
 }
 
 button,
@@ -90,6 +98,10 @@ button:focus,
   color: var(--dark-grey);
 }
 
+.navigation-list__item {
+  text-decoration-color: var(--secondary-color);
+}
+
 .navigation-list__item--active {
   text-decoration: none;
 }
@@ -99,11 +111,13 @@ button:focus,
   width: 250px;
   margin-right: 40px;
   border-radius: 50%;
+  padding: 10px;
 }
 
 .profile {
   max-width: 700px;
   margin: 0 auto;
+  padding: 100px;
 }
 
 * {
@@ -115,12 +129,16 @@ button:focus,
   display: flex;
   flex-direction: column;
   text-align: center;
+  border: 3px solid var(--primary-color);
+  background: var(--secondary-color);
 }
 
 .page-header {
   display: flex;
   width: 100%;
   padding: 20px;
+  border: 3px solid var(--primary-color);
+  background: var(--secondary-color);
 }
 
 .page-header__item {
@@ -264,4 +282,22 @@ button:focus,
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
+}
+
+.contact {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.para-text {
+  color: black;
+  font-size: 18px;
+}
+
+#contact-form {
+  border: 3px solid var(--primary-color);
+  margin: 10px 800px;
+  padding: 10px 10px;
+  background: lightgray;
 }

@@ -14,18 +14,20 @@ Secondary Color (Light Yellow): #F7DC6F
 */
 
 body {
-  background-color: lightgray;
+  background-color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
   /* Sets the font size to 16px */
   line-height: 1.6;
   /* Sets the line-height to 1.6 */
+  border: 3px solid #f23a46;
 }
 
 h1 {
   font-size: 30px;
   font-weight: 700;
+  color: #238236;
 }
 
 h2 {
@@ -39,7 +41,7 @@ h3 {
 }
 
 a {
-  color: #357b70;
+  color: #f23a46;
 }
 
 a:hover, a:focus {
@@ -57,6 +59,10 @@ a:active {
   color: #489c79;
 }
 
+.nagivation-list {
+  color: #f23a46;
+}
+
 button {
   /* overwrites browser defaults and resets the border */
   border: none;
@@ -64,7 +70,7 @@ button {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: #357b70;
+  background-color: #f23a46;
   color: white;
   text-decoration: none;
   /*adds spacing to the button (this will be discussed more in-depth later) */
@@ -84,7 +90,7 @@ button {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: #357b70;
+  background-color: #f23a46;
   color: white;
   text-decoration: none;
   /*adds spacing to the button (this will be discussed more in-depth later) */
@@ -108,8 +114,13 @@ button:focus,
 }
 
 .button__secondary {
-  background-color: #e0b354;
+  background-color: #62cc77;
   color: #2b2b2b;
+}
+
+.navigation-list__item {
+  -webkit-text-decoration-color: #62cc77;
+          text-decoration-color: #62cc77;
 }
 
 .navigation-list__item--active {
@@ -121,11 +132,13 @@ button:focus,
   width: 250px;
   margin-right: 40px;
   border-radius: 50%;
+  padding: 10px;
 }
 
 .profile {
   max-width: 700px;
   margin: 0 auto;
+  padding: 100px;
 }
 
 * {
@@ -143,6 +156,8 @@ button:focus,
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  border: 3px solid #f23a46;
+  background: #62cc77;
 }
 
 .page-header {
@@ -151,6 +166,8 @@ button:focus,
   display: flex;
   width: 100%;
   padding: 20px;
+  border: 3px solid #f23a46;
+  background: #62cc77;
 }
 
 .page-header__item {
@@ -359,4 +376,22 @@ button:focus,
           animation-direction: alternate;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+}
+
+.contact {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.para-text {
+  color: black;
+  font-size: 18px;
+}
+
+#contact-form {
+  border: 3px solid #f23a46;
+  margin: 10px 800px;
+  padding: 10px 10px;
+  background: lightgray;
 }
