@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.production.css">
   <!-- Add your logo here -->
-  <img src="http://via.placeholder.com/200x70" alt="logo">
+  <img src="img/bflogo.png" width="150" height="80" alt="logo">
   <nav class="main-navigation page-header__item">
     <ul role="menubar" class="navigation-list">
       <li role="presentation">
@@ -28,12 +28,12 @@
     </ul>
   </nav>
 </header>
-<body>
+<body class="contact">
   <div>
     <h1>Contact</h1>
   </div>
   <div>
-    <p>Brandon Fabie<br>
+    <p class="para-text">Brandon Fabie<br>
       520 Falcon Way<br>
       Hercules, CA 94547<br><br>
       Tel <a href="tel:6502083399">6502083399</a><br>
@@ -43,18 +43,18 @@
   </div>
   <form action="" method-"post" id="contact-form">
     <label class="standard-label" for="contact-email">E-mail: </label>
-    <input type="email" id="contact-email" required>
+    <input type="email" id="contact-email" required><br><br>
 
     <label class="standard-label" for="contact-tel">Telephone: </label>
-    <input type="tel" id="contact-tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+    <input type="tel" id="contact-tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br><br>
 
     <label class="standard-label" for="contact-message">Message: </label>
-    <textarea id="contact-message" maxlength="240" required></textarea>
+    <textarea id="contact-message" maxlength="240" required></textarea><br>
 
     <input type="submit" value="Send message">
   </form>
   <script src="js/tota11y.min.js"></script>
-  </body>
+</body>
   <footer class="page-footer">
     <!-- Twitter Icon -->
     <nav>
