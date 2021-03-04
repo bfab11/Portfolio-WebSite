@@ -1,6 +1,5 @@
 /*
 Colors used
-
 Text Color (Dark Gray): #2b2b2b;
 Primary Color (Light Green): #2ECC71
 Secondary Color (Light Yellow): #F7DC6F
@@ -268,7 +267,7 @@ button:focus,
 
 @keyframes cloud-move-reverse {
   from {
-    transform: translate(446, 48px);
+    transform: translate(446px, 48px);
   }
   to {
     transform: translate(100px, 48px);
