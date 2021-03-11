@@ -7,10 +7,9 @@
 
 /*
 Colors used
-
 Text Color (Dark Gray): #2b2b2b;
-Primary Color (Light Green): #2ECC71
-Secondary Color (Light Yellow): #F7DC6F
+Primary Color (Light Red): #f23a46
+Secondary Color (Light Green): #62cc77
 */
 
 body {
@@ -21,7 +20,6 @@ body {
   /* Sets the font size to 16px */
   line-height: 1.6;
   /* Sets the line-height to 1.6 */
-  border: 3px solid #f23a46;
 }
 
 h1 {
@@ -156,7 +154,6 @@ button:focus,
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  border: 3px solid #f23a46;
   background: #62cc77;
 }
 
@@ -166,7 +163,6 @@ button:focus,
   display: flex;
   width: 100%;
   padding: 20px;
-  border: 3px solid #f23a46;
   background: #62cc77;
 }
 
@@ -343,8 +339,8 @@ button:focus,
 
 @-webkit-keyframes cloud-move-reverse {
   from {
-    -webkit-transform: translate(446, 48px);
-            transform: translate(446, 48px);
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
   }
   to {
     -webkit-transform: translate(100px, 48px);
@@ -354,8 +350,8 @@ button:focus,
 
 @keyframes cloud-move-reverse {
   from {
-    -webkit-transform: translate(446, 48px);
-            transform: translate(446, 48px);
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
   }
   to {
     -webkit-transform: translate(100px, 48px);
@@ -390,8 +386,7 @@ button:focus,
 }
 
 #contact-form {
-  border: 3px solid #f23a46;
-  margin: 10px 800px;
+  margin: 10px auto;
   padding: 10px 10px;
   background: lightgray;
 }

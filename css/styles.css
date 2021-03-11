@@ -14,7 +14,7 @@ Secondary Color (Light Green): #62cc77
 }
 
 body {
-  background-color: whitespace;
+  background-color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -267,7 +267,7 @@ button:focus,
     transform: translate(446px, 48px);
   }
   to {
-    transform: translate(100px, 48%);
+    transform: translate(100px, 48px);
   }
 }
 
