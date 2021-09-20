@@ -6,15 +6,18 @@ Secondary Color (Light Green): #62cc77
 */
 
 :root {
-  --primary-color: #f23a46;
+  --primary-red: rgb(250, 59, 59);
+  --primary-white: rgba(236, 233, 233, 0.959);
   --secondary-color: #62cc77;
   --secondary-color-darker: #238236;
-  --dark-grey: #2b2b2b;
+  --black: rgb(10, 10, 10);
   --font-weight: 700;
 }
 
 body {
-  background-color: white;
+  background-color: rgba(236, 233, 233, 0.959);
+  padding: 0;
+  margin: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -26,7 +29,7 @@ body {
 h1 {
   font-size: 30px;
   font-weight: var(--font-weight);
-  color: var(--secondary-color-darker);
+  color: var(--black);
 }
 
 h2 {
@@ -39,8 +42,12 @@ h3 {
   font-weight: var(--font-weight);
 }
 
+span {
+  color: var(--primary-red);
+}
+
 a {
-  color: var(--primary-color);
+  color: var(--primary-red);
 }
 
 a:hover, a:focus {
@@ -50,16 +57,20 @@ a:hover, a:focus {
 
 a:visited {
   /* visited link */
-  color: #05676e;
+  color: rgb(252, 248, 248);
 }
 
 a:active {
   /* Selected link */
-  color: #489c79;
+  color: var(--primary-red);
 }
 
 .nagivation-list {
-  color: var(--primary-color);
+  color: var(--primary-red);
+}
+
+.navigation-list-wrapper {
+  margin: 5em 2em 0 0;
 }
 
 button,
@@ -70,7 +81,7 @@ button,
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: var(--primary-color);
+  background-color: var(--primary-red);
   color: white;
   text-decoration: none;
   /*adds spacing to the button (this will be discussed more in-depth later) */
@@ -96,12 +107,30 @@ button:focus,
   color: var(--dark-grey);
 }
 
+.logo {
+  border-radius: 50%;
+  width: 12em;
+  height: 8em;
+  margin-left: 2em;
+}
+
 .navigation-list__item {
-  text-decoration-color: var(--secondary-color);
+  font-weight: bold;
+  text-decoration-color: var(--primary-red);
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.navigation-list__item:hover {
+  color: var(--primary-red);
+  font-size: 1.5em;
+  transition: 0.5s ease-in-out;
 }
 
 .navigation-list__item--active {
   text-decoration: none;
+  color: var(--primary-red);
+  font-size: .9em;
 }
 
 .profile__portrait {
@@ -127,14 +156,15 @@ button:focus,
   display: flex;
   flex-direction: column;
   text-align: center;
-  background: var(--secondary-color);
 }
 
 .page-header {
   display: flex;
+  margin: 0;
   width: 100%;
   padding: 20px;
-  background: var(--secondary-color);
+  background: rgb(10, 10, 10);
+  border-bottom: 10px solid rgb(250, 59, 59);
 }
 
 .page-header__item {
@@ -155,6 +185,27 @@ button:focus,
   margin-left: 15px;
 }
 
+.github,
+.twitter,
+.linkedin {
+  padding: .5em;
+  height: 4em;
+}
+
+.github:hover,
+.twitter:hover,
+.linkedin:hover {
+  background: var(--primary-red);
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+}
+
+h1.work-page {
+  text-align: center;
+  font-size: 3em;
+  margin: .5em auto;
+}
+
 /*start grid fallback */
 .grid__item {
   display: inline-block;
@@ -165,21 +216,87 @@ button:focus,
 .grid {
   display: grid;
   /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  margin: 0 30em;
 }
 
 .grid__item {
   background-color: lightgray;
-  width: auto;
+  width: 30em;
+  height: 20em;
   min-height: auto;
   margin: 0;
   padding: 20px;
 }
 
-.grid__item:last-child {
+/* .grid__item:last-child {
   grid-column: 3 / 3;
   grid-row: 1 / 3;
+} */
+
+.project-img-wrapper {
+  text-align: center;
+  margin-top: -10px;
+}
+
+.project-img {
+  width: 60%;
+  height: 60%;
+}
+
+.project-img-2 {
+  width: 50%;
+  height: 50%;
+}
+
+.project-img-3 {
+  width: 40%;
+  height: 40%;
+}
+
+.project-title {
+  margin: 0;
+  margin-top: -.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.project-text {
+  margin-top: -.1em;
+  
+}
+
+.project-link-wrapper {
+  text-align: center;
+  margin-top: 1.4em;
+}
+
+.project-link-wrapper-2 {
+  text-align: center;
+  margin-top: -1em;
+}
+
+.project-link-wrapper-3 {
+  text-align: center;
+  margin-top: -.8em;
+}
+
+
+.project-link {
+  padding: .5em;
+  margin: 0 .5em;
+  background: var(--black);
+  color: var(--primary-white);
+  text-decoration: none;
+  border-radius: 1em;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  background: var(--primary-white);
+  color: var(--primary-red);
+  transition: 0.2s ease-in-out;
 }
 
 @media all and (max-width: 500px) {
@@ -218,6 +335,7 @@ button:focus,
 }
 
 .cv {
+  display: block;
   text-align: center;
 }
 
@@ -295,4 +413,21 @@ button:focus,
   margin: 10px auto;
   padding: 10px 10px;
   background: lightgray;
+}
+
+.skills{
+  display: inline-block;
+  margin-left: 40%;
+}
+
+.experience-table {
+  display: inline-flex;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 5%;
+  margin-bottom: 2%;
+}
+
+.experience-list {
+  padding: 20%;
 }
