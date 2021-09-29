@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="css/style.production.css">
 </head>
 <body class="contact">
@@ -20,7 +21,7 @@
       <div class="navigation-list-wrapper">
         <ul role="menubar" class="navigation-list">
           <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item">Home</a>
           </li>
           <li role="presentation">
             <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
@@ -29,13 +30,66 @@
             <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
           </li>
           <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+            <a href="contact.html" role="menuitem" class="navigation-list__item--active">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
-  <div>
+
+  <section class="contact-wrapper">
+    <div class="content">
+      <h2>Contact Me</h2>
+    </div>
+    <div class="contact-info-wrapper">
+      <div class="contact-info">
+        <div class="contact-info-box">
+          <div class="contact-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <div class="contact-text">
+            <h3>Address</h3>
+            <p>520 Falcon Way, Hercules, CA, 94547</p>
+          </div>
+        </div>
+        <div class="contact-info-box">
+          <div class="contact-icon"><i class="fas fa-phone-volume"></i></div>
+          <div class="contact-text">
+            <h3>Phone</h3>
+            <p>650-208-3399</p>
+          </div>
+        </div>
+        <div class="contact-info-box">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-text">
+            <h3>Email</h3>
+            <p>brandon.fabie94@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form>
+          <h2>Send Message</h2>
+          <div class="input-box">
+            <input type="text" name="" required="required">
+            <span>Full Name</span>
+          </div>
+          <div class="input-box">
+            <input type="text" name="" required="required">
+            <span>Email</span>
+          </div>
+          <div class="input-box">
+            <textarea required="required"></textarea>
+            <span>Type your message</span>
+            <div class="input-box">
+              <input type="submit" name="" value="Send">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <div>
     <h1>Contact</h1>
   </div>
   <div>
@@ -58,7 +112,7 @@
     <textarea id="contact-message" maxlength="240" required></textarea><br>
 
     <input type="submit" value="Send message">
-  </form>
+  </form> -->
   <footer class="page-footer">
     <!-- Twitter Icon -->
     <nav>
