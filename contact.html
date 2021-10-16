@@ -12,28 +12,22 @@
   <link rel="stylesheet" type="text/css" href="css/style.production.css">
 </head>
 <body class="contact">
-  <header class="page-header">
-    <!-- Add your logo here -->
-    <a href="index.html">
-      <img class="logo" src="img/bflogo.png" width="150" height="80" alt="logo">
-    </a>
-    <nav class="main-navigation page-header__item">
-      <div class="navigation-list-wrapper">
-        <ul role="menubar" class="navigation-list">
-          <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item">Home</a>
-          </li>
-          <li role="presentation">
-            <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
-          </li>
-          <li role="presentation">
-            <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
-          </li>
-          <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list__item--active">Contact</a>
-          </li>
-        </ul>
+  <header class="nav-container">
+    <nav class="navbar">
+      <a href="index.html">
+        <img class="logo" src="img/bflogo.png" alt="logo">
+      </a>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-links">Home</a></li>
+        <li><a href="about.html" class="nav-links">About</a></li>
+        <li><a href="work.html" class="nav-links">Work</a></li>
+        <li><a href="contact.html" class="nav-links nav-links--active">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -66,53 +60,32 @@
         </div>
       </div>
       <div class="contact-form">
-        <form>
+        <form action="https://formspree.io/f/xjvjdkqk" method="POST" id="my-form">
           <h2>Send Message</h2>
           <div class="input-box">
-            <input type="text" name="" required="required">
-            <span>Full Name</span>
+            <input type="text" name="First Name" required="required">
+            <span>First Name</span>
           </div>
           <div class="input-box">
-            <input type="text" name="" required="required">
+            <input type="text" name="Last Name" required="required">
+            <span>Last Name</span>
+          </div>
+          <div class="input-box">
+            <input type="email" name="Email" required="required">
             <span>Email</span>
           </div>
           <div class="input-box">
-            <textarea required="required"></textarea>
+            <textarea type="text" name="Message" required="required"></textarea>
             <span>Type your message</span>
             <div class="input-box">
-              <input type="submit" name="" value="Send">
+              <input type="submit" value="Send">
             </div>
           </div>
         </form>
+        <div id="status"></div>
       </div>
     </div>
   </section>
-
-
-  <!-- <div>
-    <h1>Contact</h1>
-  </div>
-  <div>
-    <p class="para-text">Brandon Fabie<br>
-      520 Falcon Way<br>
-      Hercules, CA 94547<br><br>
-      Tel <a href="tel:6502083399">6502083399</a><br>
-      Email <a href="mailto:brandon.fabie94@gmail.com">brandon.fabie94@gmail.com</a><br>
-      <a href="mailto:brandon.fabie94@gmail.com">Contact me!</a>
-    </p>
-  </div>
-  <form action="" method="post" id="contact-form">
-    <label class="standard-label" for="contact-email">E-mail: </label>
-    <input type="email" id="contact-email" required><br><br>
-
-    <label class="standard-label" for="contact-tel">Telephone: </label>
-    <input type="tel" id="contact-tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br><br>
-
-    <label class="standard-label" for="contact-message">Message: </label>
-    <textarea id="contact-message" maxlength="240" required></textarea><br>
-
-    <input type="submit" value="Send message">
-  </form> -->
   <footer class="page-footer">
     <!-- Twitter Icon -->
     <nav>
@@ -134,5 +107,6 @@
       </div>
     </nav>
   </footer>
+  <script src="app.js"></script>
 </body>
 </html>
